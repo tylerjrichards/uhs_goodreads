@@ -6,7 +6,7 @@ import streamlit as st
 import xmltodict
 from pandas import json_normalize
 
-st.set_page_config(page_title="What is your information diet like, really?")
+st.set_page_config(page_title="A killer read")
 
 st.title("📚 A Killer read 📚")
 st.subheader("Compare your Goodreads history to the United Health Care CEO's Killer, Louis Mangione")
