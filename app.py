@@ -99,7 +99,10 @@ else:
     def get_uhs_rating(title):
         matches = uhs_reader_df[uhs_reader_df['title'].str.lower().str.contains(title.lower()) | 
                             uhs_reader_df['title'].str.lower().str.contains(title.lower())]
-        return int(matches['rating'].iloc[0]) if not matches.empty and 'rating' in matches.columns else None
+        if matches.empty or 'rating' not in matches.columns:
+            return None
+        rating = matches['rating'].iloc[0]
+        return int(rating) if pd.notnull(rating) else None
 
     comparison_df["Louis Mangione's Rating"] = comparison_df['Book Title'].apply(get_uhs_rating)
 
