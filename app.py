@@ -8,8 +8,8 @@ from pandas import json_normalize
 
 st.set_page_config(page_title="What is your information diet like, really?")
 
-st.title("Goodreads Similarity Analysis")
-st.subheader("Compare your reads to Louis Mangione's")
+st.title("📚 A Killer read 📚")
+st.subheader("Compare your Goodreads history to the United Health Care CEO's Killer, Louis Mangione")
 
 default_username = st.selectbox(
     "Use my own Goodreads profile",
